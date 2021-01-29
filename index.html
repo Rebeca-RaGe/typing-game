@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/0ecafe3ed6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Typing Game</title>
+</head>
+
+<body>
+
+
+  <header class="header">
+    <form id="settings-form" class="settings-form">
+      <label for="level">Difficulty</label>
+      <select type="text" name="level" id="level">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </form>
+  </header>
+
+  <div id="container">
+    <div id="main-content" class="container">
+      <div class="title" id="title">
+        <h2><i class="fas fa-hourglass-start"></i> Speed Typer <i class="fas fa-hourglass-end"></i>
+        </h2>
+      </div>
+      <div class="values">
+        <div class="text">Time left: <span id="time"></span><span>s</span></div>
+        <div class="text">Score: <span id="score"></span></div>
+      </div>
+      <p class="text">Type the following:</p>
+      <p class="word" id="word">superficial</p>
+      <input class="input" type="text" name="answer" id="answer" autocomplete="off" placeholder="Type the world">
+    </div>
+    <div class="end-game-container" id="end-game-container">
+      <h2>Time is Over!!</h2>
+      <p>Your final score is: <span id="last-score"></span></p>
+      <button class="btn reset" id="reset">Play Again!</button>
+    </div>
+  </div>
+
+  <button id="settings-btn" class="btn settings-btn">
+    <i class="fas fa-cogs"></i>
+  </button>
+  <script src="app.js"></script>
+</body>
+
+</html>

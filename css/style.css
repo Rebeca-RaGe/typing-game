@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP&display=swap");
+:root {
+  --primary-color: #ff715b;
+  --secondary-color: #ffc857;
+  --third-color: #1ea896;
+  --details-color: #101935;
+  --white-color: #f6f5f5;
+  --font-title: "Lobster", cursive;
+  --font-body: "Noto Sans JP", sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--white-color);
+  color: var(--white-color);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text {
+  font-size: 1.1rem;
+}
+
+.word {
+  padding: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--third-color);
+  min-height: 4.3rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+
+.header .settings-form #level {
+  margin: 0 1rem;
+  padding: 0.3rem 3rem;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  -webkit-box-shadow: var(--details-color) 0 0 2px;
+          box-shadow: var(--details-color) 0 0 2px;
+  font-size: 1rem;
+}
+
+.container {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  -webkit-box-shadow: var(--details-color) 0 3px 5px;
+          box-shadow: var(--details-color) 0 3px 5px;
+  color: var(--details-color);
+}
+
+.container .title {
+  margin-bottom: 0.5rem;
+  padding: 1.3rem;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  -webkit-box-shadow: var(--details-color) 0 2px 3px;
+          box-shadow: var(--details-color) 0 2px 3px;
+  font-size: 1.5rem;
+  color: var(--white-color);
+}
+
+.container .title .animation {
+  -webkit-animation: rotation 5s ease infinite backwards;
+          animation: rotation 5s ease infinite backwards;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.container .values {
+  margin: 1rem;
+  margin-bottom: 1.5rem;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .input {
+  margin: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  border: var(--secondary-color) 1px solid;
+  font-size: 1.3rem;
+  color: var(--details-color);
+  -webkit-box-shadow: 0 2px 3px;
+          box-shadow: 0 2px 3px;
+}
+
+.container .input:focus {
+  outline: none;
+  border: var(--primary-color) 2px solid;
+}
+
+.settings-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  height: 35px;
+  width: 35px;
+}
+
+.settings-btn:hover {
+  color: var(--primary-color);
+  background-color: var(--white-color);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-box-shadow: var(--details-color) 0 0 10px;
+          box-shadow: var(--details-color) 0 0 10px;
+}
+
+.btn {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: var(--primary-color) 3px solid;
+  border-radius: 10px;
+  -webkit-box-shadow: var(--details-color) 0 0 5px;
+          box-shadow: var(--details-color) 0 0 5px;
+  font-size: 1.1rem;
+}
+
+.toggle {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.end-game-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 2.5rem;
+  margin: 0.5rem;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  -webkit-box-shadow: var(--details-color) 0 3px 5px;
+          box-shadow: var(--details-color) 0 3px 5px;
+  color: var(--details-color);
+}
+
+.end-game-container .reset {
+  margin: 1rem;
+  padding: 0.5rem;
+}
